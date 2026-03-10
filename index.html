@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-PT">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -43,12 +43,12 @@
             line-height: 1.6;
             overflow-x: hidden;
             
-            /* Configuração do Fundo Fixo (Solicitado) */
+            /* Configuração do Fundo Fixo */
             background-image: url('https://i.imgur.com/eqSILLR.png');
-            background-repeat: no-repeat;     /* Garante que não repete */
-            background-attachment: fixed;     /* Garante que o fundo fica parado ao rolar */
-            background-position: center;      /* Centraliza a imagem */
-            background-size: cover;           /* Estica a imagem para cobrir a tela inteira */
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
         }
 
         h1, h2, h3, h4, h5, h6 {
@@ -72,20 +72,8 @@
         }
 
         .logo img {
-            height: 40px; /* Ajuste para o logo ficar proporcional */
+            height: 40px;
             width: auto;
-        }
-
-        .status-badge {
-            font-size: 0.75rem;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            padding: 5px 12px;
-            background: rgba(0, 190, 255, 0.2);
-            border: 1px solid var(--brand-cyan-50);
-            border-radius: 4px;
-            color: white;
-            font-weight: 600;
         }
 
         /* Hero Section */
@@ -94,7 +82,6 @@
             text-align: center;
         }
 
-        /* Nova Classe para o Badge "Podcast" */
         .podcast-badge {
             display: inline-block;
             font-size: 0.85rem;
@@ -123,7 +110,7 @@
 
         .hero-subtitle {
             font-size: 1.5rem;
-            color: var(--text-white); /* Texto mais claro para contraste com fundo */
+            color: var(--text-white);
             margin-bottom: 0;
             font-weight: 300;
             text-shadow: 0 2px 4px rgba(0,0,0,0.5);
@@ -158,7 +145,7 @@
         }
 
         .section-desc {
-            color: #ddd; /* Mais claro para leitura sobre imagem */
+            color: #ddd;
             max-width: 600px;
             margin: 0 auto;
             text-shadow: 0 1px 2px rgba(0,0,0,0.8);
@@ -166,61 +153,11 @@
 
         /* Grids */
         .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
-        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
-
-        /* Cards Gerais */
-        .card {
-            background: var(--bg-card);
-            padding: 30px;
-            border-radius: 16px;
-            border: 1px solid rgba(255,255,255,0.1);
-            transition: transform 0.3s ease;
-            backdrop-filter: blur(10px); /* Blur para legibilidade sobre fundo */
-        }
-        .card:hover { transform: translateY(-5px); border-color: var(--brand-cyan-50); }
-        .card h3 { margin-bottom: 15px; font-size: 1.25rem; }
-        .card p { font-size: 0.95rem; color: #ccc; }
-        .card ul {
-            list-style: none;
-            padding-left: 0;
-            margin-top: 15px;
-        }
-        .card li {
-            position: relative;
-            padding-left: 20px;
-            margin-bottom: 10px;
-            color: #ccc;
-            font-size: 0.9rem;
-        }
-        .card li::before {
-            content: "•";
-            color: var(--brand-cyan-50);
-            position: absolute;
-            left: 0;
-            font-weight: bold;
-        }
-
-
-        /* Cores Sólidas 50 (Ajuste de texto para preto para contraste) */
-        .card-solid-blue {
-            background-color: var(--brand-cyan-50);
-            color: var(--bg-dark);
-            border: none;
-        }
-        .card-solid-blue p { color: rgba(10, 16, 20, 0.8); }
-
-        .card-solid-green {
-            background-color: var(--brand-green-50);
-            color: var(--bg-dark);
-            border: none;
-        }
-        .card-solid-green p { color: rgba(10, 16, 20, 0.8); }
 
         /* Canais */
         .channel-card {
             display: flex;
-            align-items: flex-start; /* Alinhamento ao topo para conteúdo maior */
+            align-items: flex-start;
             gap: 15px;
             padding: 25px;
             background: rgba(0,0,0,0.6);
@@ -236,148 +173,6 @@
         .channel-card.spotify { border-color: #1DB954; }
         .channel-card.linkedin { border-color: #0077B5; }
         .channel-card.email { border-color: var(--brand-cyan-50); }
-
-        /* KPIs */
-        .kpi-box {
-            text-align: center;
-            padding: 25px;
-            background: rgba(0,0,0,0.5);
-            border-radius: 12px;
-            border: 1px solid rgba(255,255,255,0.1);
-            backdrop-filter: blur(5px);
-        }
-        .kpi-value {
-            font-size: 2.5rem;
-            font-weight: 700;
-            font-family: 'Poppins', sans-serif;
-            margin: 10px 0;
-            background: var(--grad-cyan-green);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .kpi-label { font-size: 0.9rem; color: #ccc; text-transform: uppercase; letter-spacing: 1px; }
-
-        /* Bancada de Pautas */
-        .topic-list { list-style: none; }
-        .topic-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-        }
-        .topic-item:last-child { border-bottom: none; }
-        
-        .topic-info h4 { margin-bottom: 5px; color: var(--brand-cyan-50); }
-        .topic-meta { font-size: 0.85rem; color: #ccc; }
-        .topic-hosts { font-size: 0.8rem; color: #888; margin-top: 2px; }
-
-        .tag {
-            padding: 4px 10px;
-            border-radius: 20px;
-            font-size: 0.7rem;
-            font-weight: 600;
-            text-transform: uppercase;
-        }
-        .tag-tech { background: rgba(0, 190, 255, 0.2); color: var(--brand-cyan-50); border: 1px solid var(--brand-cyan-50); }
-        .tag-biz { background: rgba(255, 137, 255, 0.2); color: var(--brand-pink-50); border: 1px solid var(--brand-pink-50); }
-
-
-        .btn-cta {
-            background: var(--grad-blue-cyan);
-            color: var(--bg-dark); /* Texto escuro para contraste no degradê cyan */
-            padding: 15px 40px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            display: inline-block;
-            transition: all 0.3s;
-        }
-        .btn-cta:hover { transform: scale(1.02); opacity: 0.9; box-shadow: 0 0 20px rgba(0, 190, 255, 0.5); }
-
-        /* Ajuste de ícones utilitários */
-        .text-cyan { color: var(--brand-cyan-50); }
-        .text-green { color: var(--brand-green-50); }
-        .text-pink { color: var(--brand-pink-50); }
-
-        /* Estilo do Player de Áudio/Piloto */
-        .pilot-player {
-            display: block;
-            position: relative;
-            border-radius: 16px;
-            overflow: hidden;
-            border: 1px solid rgba(255,255,255,0.2);
-            transition: transform 0.3s, box-shadow 0.3s;
-            cursor: pointer;
-            text-decoration: none;
-        }
-        .pilot-player:hover {
-            transform: scale(1.02);
-            box-shadow: 0 15px 40px rgba(0, 190, 255, 0.2);
-            border-color: var(--brand-cyan-50);
-        }
-        .pilot-thumb {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        .play-overlay {
-            position: absolute; top: 50%; left: 50%;
-            transform: translate(-50%, -50%);
-            width: 80px; height: 80px;
-            background: rgba(0,0,0,0.6);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            backdrop-filter: blur(4px);
-            border: 2px solid white;
-            transition: background 0.3s;
-        }
-        .pilot-player:hover .play-overlay {
-            background: var(--brand-cyan-50);
-            border-color: var(--brand-cyan-50);
-            color: var(--bg-dark);
-        }
-        .play-icon {
-            font-size: 2rem;
-            color: white;
-            margin-left: 5px; /* Visual fix */
-        }
-        .pilot-player:hover .play-icon {
-            color: var(--bg-dark);
-        }
-
-        /* Launch Timeline (Nova Classe) */
-        .launch-timeline {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-bottom: 40px;
-            flex-wrap: wrap;
-        }
-        .launch-date-card {
-            background: rgba(255,255,255,0.1);
-            backdrop-filter: blur(5px);
-            padding: 15px 30px;
-            border-radius: 12px;
-            border: 1px solid rgba(255,255,255,0.2);
-            text-align: center;
-            min-width: 200px;
-        }
-        .launch-date-title {
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #ccc;
-            margin-bottom: 5px;
-        }
-        .launch-date-value {
-            font-family: 'Poppins', sans-serif;
-            font-weight: 700;
-            font-size: 1.5rem;
-            color: var(--brand-cyan-50);
-        }
 
         /* Timeline (Cronograma) */
         .timeline { position: relative; max-width: 800px; margin: 0 auto; }
@@ -441,9 +236,7 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <!-- Novo Badge "Podcast" -->
             <div class="podcast-badge">PODCAST - EPISÓDIO 1</div>
-
             <h1>Xertica <span class="text-gradient">Talks</span></h1>
             <p class="hero-subtitle">Antecipando 2040: IA para decisões ágeis e consistentes na Justiça.</p>
         </div>
@@ -505,7 +298,7 @@
         </div>
     </section>
 
-    <!-- Cronograma de Lançamento (NOVO) -->
+    <!-- Cronograma de Lançamento -->
     <section style="background: rgba(0, 190, 255, 0.03); border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05);">
         <div class="container">
             <div class="section-header">
@@ -522,7 +315,7 @@
                             <li><strong>YouTube:</strong> <a href="https://drive.google.com/file/d/1JppUErz10V7eYnTh9A6Pef_6E-4bxr-O/view?usp=sharing" target="_blank" class="doc-link"><i class="fa-solid fa-video"></i> Gravação</a> <span style="margin: 0 5px; color: rgba(255,255,255,0.2);">|</span> <a href="https://docs.google.com/document/d/1K3R8grOIr_M_PBwJGMOlr5BKYE_FeZLwR0TLcpAHy3U/edit?usp=sharing" target="_blank" class="doc-link"><i class="fa-solid fa-file-lines"></i> Descrição</a></li>
                             <li>
                                 <strong>LinkedIn:</strong> 
-                                <a href="https://docs.google.com/document/d/15dYrdkWB8QVrWXg-Lc1T1BXq64CsGOTKt3U-dHPJslE/edit?usp=sharing" target="_blank" class="doc-link"><i class="fa-solid fa-file-lines"></i> COPY</a> 
+                                <a href="https://docs.google.com/document/d/1GtloeiNqQ-KksPP9YOMVhJJVY1HU5HwjTBF5sL8BG28/edit?usp=sharing" target="_blank" class="doc-link"><i class="fa-solid fa-file-lines"></i> COPY</a> 
                                 <a href="https://www.canva.com/design/DAHC5f2_42I/XXuTia73yIyovg1nnlcRYw/edit?utm_content=DAHC5f2_42I&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="doc-link"><i class="fa-solid fa-image"></i> Arte</a>
                             </li>
                             <li>
@@ -530,6 +323,7 @@
                                 <a href="https://docs.google.com/document/d/1GtloeiNqQ-KksPP9YOMVhJJVY1HU5HwjTBF5sL8BG28/edit?usp=sharing" target="_blank" class="doc-link"><i class="fa-solid fa-file-lines"></i> COPY</a> 
                                 <a href="https://www.canva.com/design/DAHC5f2_42I/XXuTia73yIyovg1nnlcRYw/edit?utm_content=DAHC5f2_42I&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="doc-link"><i class="fa-solid fa-image"></i> Arte</a> 
                                 <a href="https://www.canva.com/design/DAG-e6SWz38/UU0wR-FuKcacLcHhseZKrg/edit?utm_content=DAG-e6SWz38&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="doc-link"><i class="fa-solid fa-clapperboard"></i> Story</a>
+                                <a href="https://www.canva.com/design/DAHDNKtg8Cc/mSjDGuv59TqbUWpUTipY0A/edit?utm_content=DAHDNKtg8Cc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="doc-link"><i class="fa-solid fa-clapperboard"></i> Story 2</a>
                             </li>
                         </ul>
                     </div>
